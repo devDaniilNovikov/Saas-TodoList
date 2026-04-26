@@ -124,7 +124,7 @@ Baseline: Master-Prompt-V4 (`MP-V4-2026-04-25`). Operating Model: `improved/AI-A
 ## Format Templates
 
 ### Agent Invocation Record (для каждого запуска агента)
-- **Wave-id** (W1..WN из `AI-Agents-Constructor-V2` §13)
+- **Wave-id** (W1..W5 из `AI-Agents-Constructor-V2` §13; счётчик зафиксирован визуальным контрактом `agent_pipeline_waves.svg` = 5 волн; иной счётчик → `[Risk: pipeline-visual-contract-drift]` + STOP)
 - **Agent-name** (из Official Agent Catalog — точное имя)
 - **V2 Spec Path** (`improved/<Agent-Name>-V2.md`)
 - **Status**: pending | running | complete | blocked | failed
@@ -193,6 +193,7 @@ Baseline: Master-Prompt-V4 (`MP-V4-2026-04-25`). Operating Model: `improved/AI-A
 - [ ] Run Manifest заполнен полностью (нет пустых ячеек).
 - [ ] Peer Cross-Check Output (orchestrator-level) таблица заполнена.
 - [ ] Wave Plan ссылается на `AI-Agents-Constructor-V2` §13 (не выдуман, не из training data).
+- [ ] Wave count = 5 (W1–W5), что совпадает с `agent_pipeline_waves.svg` и Official Agent Catalog (20 агентов: W1=2, W2=2, W3=6, W4=6, W5=3, + Founder/CTO Review как финальный ревью-пасс вне волн); иное → `[Risk: pipeline-visual-contract-drift]`.
 - [ ] Каждый Agent Invocation Record имеет все обязательные поля или явный `[Open Question]` per missing field.
 - [ ] Каждый Handoff Record имеет Pre-Output Gate Verified = yes ИЛИ blocked-status с причиной.
 - [ ] Conflict Log пустой ИЛИ каждый CFL-NNN имеет два source-attribution и severity.
