@@ -41,7 +41,6 @@ A productivity tracker (goals / tasks / habits / day-week-month planning) with a
 | Path | Role |
 |------|------|
 | `Master-Prompt-V4.md` | **Single source of truth** — full product blueprint, agent system, governance rules, constraints. Always V4. |
-| `Master-Prompt-V3.md` | **Superseded.** Kept for diff/reference only. Do not use, do not edit, do not extend. |
 | `Orchestrator.md` | Runtime-conductor: координирует порядок волн, handoff, конфликты и human approval gates для 20-агентного каталога. |
 | `improved/` | **Единственное активное расположение** всех 20 агентов + `AI-Agents-Constructor-V2.md`. Все правки — только здесь. |
 | `improved/_Agent-Base-Template.md` | Canonical V2 contract structure. All V2 agents must conform. |
